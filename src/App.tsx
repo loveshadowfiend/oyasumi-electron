@@ -8,7 +8,9 @@ function App() {
 
     return (
         <QueryClientProvider client={queryClient}>
-            <MainLayout>{/* <PopularNewTitles /> */}</MainLayout>
+            <MainLayout>
+                <PopularNewTitles />
+            </MainLayout>
         </QueryClientProvider>
     );
 }

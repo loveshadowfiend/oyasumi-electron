@@ -1,11 +1,7 @@
 import { Home, Library, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-interface SidebarContentProps {
-    isCollapsed: boolean;
-}
-
-export default function SidebarContent(props: SidebarContentProps) {
+export default function SidebarContent() {
     const iconSize = 20;
     return (
         <div className="flex flex-col gap-1 m-3">

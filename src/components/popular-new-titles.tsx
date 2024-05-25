@@ -34,7 +34,8 @@ export const PopularNewTitles = () => {
             >
                 <CarouselContent>
                     {!isLoading &&
-                        data.data.map((manga, index) => {
+                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                        data.data.map((manga: any, index: number) => {
                             const mangaId = manga.id;
                             const mangaTitle =
                                 manga.attributes.title.en ??
