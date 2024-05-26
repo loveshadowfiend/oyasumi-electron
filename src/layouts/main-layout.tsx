@@ -1,28 +1,27 @@
 import React from "react";
-import {
-    ResizableHandle,
-    ResizablePanel,
-    ResizablePanelGroup,
-} from "@/components/ui/resizable";
+import { ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable";
 import SidebarContent from "@/components/sidebar-content";
+import { Header } from "@/components/header";
 
 export const MainLayout = ({ children }: React.ComponentProps<"div">) => {
     return (
-        <div className="mt-[30px] overflow-auto border-t-[0.5px] dark">
-            <aside className="">
+        <div>
+            <Header />
+            <div className="pt-[40px] dark">
+                {/* TODO: figure out how to make this responsive :/ */}
                 <ResizablePanelGroup
-                    direction="horizontal"
                     className="min-h-screen"
+                    direction="horizontal"
                 >
-                    <ResizablePanel minSize={20} maxSize={20}>
+                    <ResizablePanel className="fixed h-screen w-[150px] border-r">
                         <SidebarContent />
                     </ResizablePanel>
-                    <ResizableHandle />
-                    <ResizablePanel className="px-[100px] py-[20px]">
-                        {children}
+                    {/* <ResizableHandle /> */}
+                    <ResizablePanel className="pl-[150px]">
+                        <main className="px-[10px] py-[20px]">{children}</main>
                     </ResizablePanel>
                 </ResizablePanelGroup>
-            </aside>
+            </div>
         </div>
     );
 };

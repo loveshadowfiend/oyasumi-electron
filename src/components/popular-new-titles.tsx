@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { fetchPopularNewTitles } from "@/api/manga";
 import { useQuery } from "@tanstack/react-query";
 import {
@@ -34,7 +35,6 @@ export const PopularNewTitles = () => {
             >
                 <CarouselContent>
                     {!isLoading &&
-                        // eslint-disable-next-line @typescript-eslint/no-explicit-any
                         data.data.map((manga: any, index: number) => {
                             const mangaId = manga.id;
                             const mangaTitle =
