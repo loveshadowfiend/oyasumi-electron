@@ -9,16 +9,15 @@ export const MainLayout = ({ children }: React.ComponentProps<"div">) => {
             <Header />
             <div className="pt-[40px] dark">
                 {/* TODO: figure out how to make this responsive :/ */}
-                <ResizablePanelGroup
-                    className="min-h-screen"
-                    direction="horizontal"
-                >
+                <ResizablePanelGroup direction="horizontal">
                     <ResizablePanel className="fixed h-screen w-[150px] border-r">
                         <SidebarContent />
                     </ResizablePanel>
                     {/* <ResizableHandle /> */}
                     <ResizablePanel className="pl-[150px]">
-                        <main className="px-[10px] py-[20px]">{children}</main>
+                        <main className="px-[10px] py-[10px] pb-[40px]">
+                            {children}
+                        </main>
                     </ResizablePanel>
                 </ResizablePanelGroup>
             </div>
