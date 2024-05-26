@@ -12,7 +12,7 @@ export default function SidebarContent() {
             <SidebarContentRow href="/search">
                 <Search size={iconSize} /> search
             </SidebarContentRow>
-            <SidebarContentRow href="">
+            <SidebarContentRow href="/settings">
                 <Settings size={iconSize} /> settings
             </SidebarContentRow>
         </div>
