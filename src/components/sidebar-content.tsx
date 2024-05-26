@@ -7,13 +7,13 @@ export default function SidebarContent() {
     return (
         <div className="flex flex-col gap-1 mt-[10px] mx-1">
             <SidebarContentRow href="/">
-                <Home size={iconSize} /> home
+                <Home size={iconSize} /> Home
             </SidebarContentRow>
             <SidebarContentRow href="/search">
-                <Search size={iconSize} /> search
+                <Search size={iconSize} /> Search
             </SidebarContentRow>
             <SidebarContentRow href="/settings">
-                <Settings size={iconSize} /> settings
+                <Settings size={iconSize} /> Settings
             </SidebarContentRow>
         </div>
     );

@@ -15,7 +15,7 @@ export const MainLayout = ({ children }: React.ComponentProps<"div">) => {
                     </ResizablePanel>
                     {/* <ResizableHandle /> */}
                     <ResizablePanel className="pl-[150px]">
-                        <main className="px-[10px] py-[10px] pb-[40px]">
+                        <main className="px-[20px] py-[10px] pb-[40px]">
                             {children}
                         </main>
                     </ResizablePanel>

@@ -11,14 +11,14 @@ export const SettingsPage = () => {
     return (
         <MainLayout>
             <div className="flex flex-col gap-1">
-                <p className="text-sm pl-[4px]">translation:</p>
+                <p className="text-sm pl-[4px]">Translation:</p>
                 <Select>
                     <SelectTrigger className="w-[180px]">
-                        <SelectValue placeholder="language" />
+                        <SelectValue placeholder="Language" />
                     </SelectTrigger>
                     <SelectContent>
-                        <SelectItem value="en">english</SelectItem>
-                        <SelectItem value="ru">russian</SelectItem>
+                        <SelectItem value="en">English</SelectItem>
+                        <SelectItem value="ru">Russian</SelectItem>
                     </SelectContent>
                 </Select>
             </div>

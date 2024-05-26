@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { MainLayout } from "@/layouts/main-layout";
 import { Input } from "../ui/input";
 import { useEffect, useState } from "react";
@@ -9,7 +10,7 @@ export const SearchPage = () => {
     const [input, setInput] = useState<string>("");
     const [fetchInput, setFetchInput] = useState<string>("");
 
-    const { data, isLoading } = useQuery({
+    const { data } = useQuery({
         enabled: !!fetchInput,
         queryKey: ["searchInput", fetchInput],
         queryFn: () => fetchMangaByTitle(fetchInput),
@@ -25,7 +26,7 @@ export const SearchPage = () => {
     return (
         <MainLayout>
             <Input
-                placeholder="type manga title here"
+                placeholder="Manga Title"
                 onChange={(e) => setInput(e.target.value)}
             />
 
