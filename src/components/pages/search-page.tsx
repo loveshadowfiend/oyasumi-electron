@@ -19,7 +19,7 @@ export const SearchPage = () => {
     useEffect(() => {
         setTimeout(() => {
             setFetchInput(input);
-        }, 500);
+        }, 1000);
     }, [input]);
 
     return (
